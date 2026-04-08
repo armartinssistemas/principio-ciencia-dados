@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Índice AVA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        .status {
+            box-sizing: border-box;
+            max-width: 960px;
+            margin: 48px auto;
+            padding: 16px 20px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .status[data-state="error"] {
+            border-left: 4px solid #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <div id="status" class="status" data-state="loading">Carregando índice gerado...</div>
+
+    <script>
+        const generatedFile = 'materiais.html';
+        const statusElement = document.getElementById('status');
+
+        async function loadGeneratedIndex() {
+            try {
+                const response = await fetch(generatedFile, { cache: 'no-store' });
+                if (!response.ok) {
+                    throw new Error(`Falha ao carregar ${generatedFile} (${response.status}).`);
+                }
+
+                const html = await response.text();
+                document.open();
+                document.write(html);
+                document.close();
+            } catch (error) {
+                statusElement.dataset.state = 'error';
+                statusElement.innerHTML = [
+                    '<strong>Não foi possível carregar o índice gerado.</strong>',
+                    `<p>${error.message}</p>`,
+                    '<p>Se você abriu este arquivo diretamente no navegador, execute por um servidor local para permitir o <code>fetch</code>.</p>'
+                ].join('');
+            }
+        }
+
+        loadGeneratedIndex();
+    </script>
+</body>
+</html>
