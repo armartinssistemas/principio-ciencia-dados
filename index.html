@@ -1,61 +1,97 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Índice AVA</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f5f7fb;
-            color: #1f2937;
-        }
+<h3>🗂️ Semana 1 — Introdução</h3>
+<p><strong>🎯 Objetivo:</strong> Apresentação da disciplina.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/C-2h0ueNnxY"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
 
-        .status {
-            box-sizing: border-box;
-            max-width: 960px;
-            margin: 48px auto;
-            padding: 16px 20px;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-        }
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%201/Apresenta%C3%A7%C3%A3o.pdf?csf=1&amp;web=1&amp;e=Ed3Dp4"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
 
-        .status[data-state="error"] {
-            border-left: 4px solid #dc2626;
-        }
-    </style>
-</head>
-<body>
-    <div id="status" class="status" data-state="loading">Carregando índice gerado...</div>
+<hr>
 
-    <script>
-        const generatedFile = 'materiais.html';
-        const statusElement = document.getElementById('status');
 
-        async function loadGeneratedIndex() {
-            try {
-                const response = await fetch(generatedFile, { cache: 'no-store' });
-                if (!response.ok) {
-                    throw new Error(`Falha ao carregar ${generatedFile} (${response.status}).`);
-                }
+<h3>🗂️ Semana 2 — Aula - Dado, informação, conhecimento e sabedoria</h3>
+<p><strong>🎯 Objetivo:</strong> Aula - Dado, informação, conhecimento e sabedoria.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/uQJPKGMfKQs"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
 
-                const html = await response.text();
-                document.open();
-                document.write(html);
-                document.close();
-            } catch (error) {
-                statusElement.dataset.state = 'error';
-                statusElement.innerHTML = [
-                    '<strong>Não foi possível carregar o índice gerado.</strong>',
-                    `<p>${error.message}</p>`,
-                    '<p>Se você abriu este arquivo diretamente no navegador, execute por um servidor local para permitir o <code>fetch</code>.</p>'
-                ].join('');
-            }
-        }
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%202/Aula%20-%20Dado,%20informa%C3%A7%C3%A3o,%20conhecimento%20e%20sabedoria.pdf?csf=1&amp;web=1&amp;e=Wv1gwE"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
 
-        loadGeneratedIndex();
-    </script>
-</body>
-</html>
+<p><strong>❓ Questões:</strong><br><a href="https://forms.cloud.microsoft/r/Pkx5mYdnsS?origin=lprLink"
+    target="_blank" rel="noreferrer noopener">📝 Acessar questões</a></p>
+
+<hr>
+
+
+<h3>🗂️ Semana 3 — Contextualização de Ciência de Dados</h3>
+<p><strong>🎯 Objetivo:</strong> Contextualização de Ciência de Dados.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/_QD1dyGZVx8"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
+
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%203/Aula%20-%20Contextualiza%C3%A7%C3%A3o%20de%20ci%C3%AAncia%20de%20dados%20e%20processo%20decis%C3%B3rio%20baseado%20em%20dados.pdf?csf=1&amp;web=1&amp;e=xdMRZE"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
+
+<p><strong>❓ Questões:</strong><br><a href="https://forms.cloud.microsoft/r/msstgaK0YF?origin=lprLink"
+    target="_blank" rel="noreferrer noopener">📝 Acessar questões</a></p>
+
+<hr>
+
+
+<h3>🗂️ Semana 4 — Produção de Dados</h3>
+<p><strong>🎯 Objetivo:</strong> Produção de Dados.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/oipdt6ifqu4"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
+
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%204/Aula%20-%20Produ%C3%A7%C3%A3o%20de%20Dados.pdf?csf=1&amp;web=1&amp;e=K4IGcn"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
+
+<p><strong>❓ Questões:</strong><br><a href="https://forms.cloud.microsoft/r/H7WFXKYuJw?origin=lprLink"
+    target="_blank" rel="noreferrer noopener">📝 Acessar questões</a></p>
+
+<hr>
+
+
+<h3>🗂️ Semana 5 — Armazenamento Dados</h3>
+<p><strong>🎯 Objetivo:</strong> Armazenamento Dados.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/k8T6VaGAUS0"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
+
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%205/Aula%20-%20Armazenamento%20de%20Dados.pdf?csf=1&amp;web=1&amp;e=rn7rHJ"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
+
+<p><strong>❓ Questões:</strong><br><a href="https://forms.cloud.microsoft/r/2h3drTqQi3?origin=lprLink"
+    target="_blank" rel="noreferrer noopener">📝 Acessar questões</a></p>
+
+<hr>
+
+
+<h3>🗂️ Semana 6 — Introdução a Data Warehouse, OLAP e Business Inteligence</h3>
+<p><strong>🎯 Objetivo:</strong> Introdução a Data Warehouse, OLAP e Business Inteligence.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/exj6AzJJLDc"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
+
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%206/5.%20Introdu%C3%A7%C3%A3o%20a%20Data%20Warehouse,%20OLAP%20e%20Business%20Inteligence.pdf?csf=1&amp;web=1&amp;e=VbBZsv"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
+
+<p><strong>❓ Questões:</strong><br><a href="https://forms.cloud.microsoft/r/gYzb43Dgbq?origin=lprLink"
+    target="_blank" rel="noreferrer noopener">📝 Acessar questões</a></p>
+
+<hr>
+
+
+<h3>🗂️ Semana 7 — Modelagem Multidimensional e Análise de Dados com OLAP</h3>
+<p><strong>🎯 Objetivo:</strong> Modelagem Multidimensional e Análise de Dados com OLAP.</p>
+<p><strong>🎥 Vídeo:</strong><br><a href="https://youtu.be/FLyvqzSbR7Y"
+    target="_blank" rel="noreferrer noopener">▶️ Assistir aula</a></p>
+
+<p><strong>📑 Slides:</strong><br><a href="https://centropaulasouza.sharepoint.com/:b:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%207/6%20.%20Modelagem%20Multidimensional%20e%20An%C3%A1lise%20de%20Dados%20com%20OLAP.pdf?csf=1&amp;web=1&amp;e=AtpoFV"
+    target="_blank" rel="noreferrer noopener">📥 Baixar slides</a></p>
+
+<p><strong>🔗 Inforgrafico:</strong><br><a href="https://centropaulasouza.sharepoint.com/:i:/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%207/infogr%C3%A1fico.png?csf=1&amp;web=1&amp;e=oenGHx"
+    target="_blank" rel="noreferrer noopener">🔗 Abrir recurso</a></p>
+
+<p><strong>🎧 Podcast:</strong><br><a href="https&#58;//centropaulasouza&#46;sharepoint&#46;com/&#58;v&#58;/r/sites/PrincpiodeCinciadeDados/Class%20Materials/Semana%207/PodCast%20-%20O_embate_entre_OLTP_e_OLAP&#46;mp4?csf=1&amp;web=1&amp;e=zyLbda"
+    target="_blank" rel="noreferrer noopener" download>🎧 Baixar podcast</a></p>
+
+<hr>
+
